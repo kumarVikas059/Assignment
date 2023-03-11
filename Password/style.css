@@ -1,0 +1,12 @@
+body {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: gray;
+}
+section {
+    border: 1px solid black;
+    padding: 16px;
+    background-color: aliceblue;
+}
