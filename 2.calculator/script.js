@@ -3,6 +3,7 @@ function calculate(){
     let n2=parseFloat(document.getElementById("n2").value);
     let op=document.getElementById("op").value;
     let message=document.getElementById("error");
+    // debugger;
     switch (op) {
         case '+':
             document.getElementById("result").value=n1+n2;
@@ -17,15 +18,15 @@ function calculate(){
                 document.getElementById("result").value=n1*n2;
             break;
             case '/':
-                // if(n2===0)
-                // {
-                //     message.innerHTML="**Result cannot be calculated for Number2=0**";
-                //     message.style.color=red;
-                //     return false;
-                // }
-                // else{
-                //     document.getElementById("result").value=n1/n2;
-                // }
+                if(n2===0)
+                {
+                    message.innerHTML="**Result cannot be calculated for Number2=0**";
+                    message.style.color=red;
+                    return false;
+                }
+                else{
+                    document.getElementById("result").value=n1/n2;
+                }
                 
             break;
         default:

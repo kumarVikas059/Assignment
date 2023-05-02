@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Right-angled triangle with asterisks</title>
+</head>
+<body>
+    <div class="whole">
+        <h1>PATTERN</h1>
+        <label for="rows">Enter Number of Rows:</label>
+        <br>
+        <input type="text" id="rows" value="">
+        <br>
+        <button id="print" onclick="pattern()">Print</button>
+        <p id="p"></p>
+    </div>
+    <script >
+        function pattern() {
+            let rows = parseInt(document.getElementById("rows").value);
+            let p = document.getElementById("p");
+            p.innerHTML = "";
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < rows - i; j++) {
+                    p.innerHTML = p.innerHTML + "*";
+                }
+                p.innerHTML = p.innerHTML + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>

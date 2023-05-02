@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Course List</title>
+  </head>
+  <body>
+    <h1>What You'll Learn</h1>
+
+    <ul id="courseList">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+    </ul>
+
+    <button onclick="addCourse()">Add Course</button>
+
+    <script>
+      const courseList = document.getElementById("courseList");
+      const courses = ["Angular", "Vue.js", "MongoDB", "Express"];
+
+      let index = 0;
+
+      function addCourse() {
+        if (index >= courses.length) {
+          alert("All courses have been added!");
+        } else {
+          const course = document.createElement("li");
+          course.innerHTML = courses[index];
+          courseList.appendChild(course);
+          index++;
+        }
+      }
+    </script>
+  </body>
+</html>

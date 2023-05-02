@@ -1,0 +1,9 @@
+#text {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div {
+    text-align: center;
+}

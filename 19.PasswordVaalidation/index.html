@@ -1,0 +1,47 @@
+
+<html>
+  <head>
+    <title>Login Form</title>
+    <style>
+      .error {
+        color: red;
+      }
+
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="loginForm">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+      const form = document.getElementById("loginForm");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const message = document.getElementById("message");
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (email.value.indexOf("@") === -1 || password.value.length < 8) {
+          message.innerHTML = "Invalid email or password!";
+          message.className = "error";
+        } else {
+          message.innerHTML = "Valid email and password!";
+          message.className = "success";
+        }
+      });
+    </script>
+  </body>
+</html>
